@@ -9,11 +9,9 @@ package 'git' do
 end
 package 'ntp'
 
-file '/etc/motd' do
-    content 'This server is property of Pallagani Suresh'
+template '/etc/motd' do
+    source 'motd.erb'
     action :create
-    owner 'root'
-    group 'root'
 end
 
 service 'ntpd' do
