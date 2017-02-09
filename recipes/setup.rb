@@ -9,8 +9,6 @@ package 'git' do
 end
 package 'ntp'
 
-
-
 file '/etc/motd' do
     content 'This server is property of Pallagani Suresh'
     action :create
